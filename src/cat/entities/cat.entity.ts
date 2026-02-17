@@ -34,7 +34,16 @@ export class Cat {
     microchipInfo: MicrochipInfo | null;
 
     @Column()
-    otherDisposition: string;   
+    otherDisposition: string;  
+    
+    @Column()
+    createdDt: Date;
+
+    @Column()
+    updatedDt: Date;
+
+    @Column()
+    status: Status;
 }
 
 export class MicrochipInfo {

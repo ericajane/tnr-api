@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { CatModule } from './cat/cat.module';
+import { VolunteerModule } from './volunteer/volunteer.module';
+import { ColonyModule } from './colony/colony.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -16,7 +18,7 @@ import { CatModule } from './cat/cat.module';
     entities: [],
     synchronize: true,    
     logging: true,
-  }), UserModule, CatModule],
+  }), UserModule, CatModule, VolunteerModule, ColonyModule],
   controllers: [AppController],
   providers: [AppService],
 })
